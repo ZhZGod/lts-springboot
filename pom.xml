@@ -51,11 +51,6 @@
             <version>1.7.2-SNAPSHOT</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.raycloud.express</groupId>
-            <artifactId>dingtalk-chatbot-sdk</artifactId>
-            <version>0.9.0-SNAPSHOT</version>
-        </dependency>
 
         <!-- lts -->
         <dependency>
@@ -68,18 +63,6 @@
             <groupId>com.github.ltsopensource</groupId>
             <artifactId>lts-core</artifactId>
             <version>1.7.2-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.raycloud</groupId>
-            <artifactId>xcrm-api-gateway-client</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>servlet-api</artifactId>
-                    <groupId>javax.servlet</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>
@@ -108,20 +91,8 @@
         </dependency>
 
         <dependency>
-            <groupId>com.raycloud</groupId>
-            <artifactId>crm-commons-log</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.raycloud</groupId>
-            <artifactId>crm-common-jpa</artifactId>
-            <version>${crm.commons.version}</version>
         </dependency>
 
         <dependency>
@@ -147,38 +118,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>com.raycloud</groupId>
-            <artifactId>dBPasswordCallback</artifactId>
-            <version>${dBPasswordCallback.version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>servlet-api</artifactId>
-                    <groupId>javax.servlet</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>log4j</artifactId>
-                    <groupId>log4j</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>commons-logging</artifactId>
-                    <groupId>commons-logging</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
 
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
             <scope>provided</scope>
             <version>${tomcat.version}</version>
-        </dependency>
-
-        <!-- 光云插件防止sql注入 -->
-        <dependency>
-            <groupId>com.raycloud</groupId>
-            <artifactId>ibatis-plugin</artifactId>
-            <version>${ibatis-plugin.version}</version>
         </dependency>
 
         <dependency>
