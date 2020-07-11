@@ -1,0 +1,69 @@
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/crm_dianzhang_big?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      jdbc-url: jdbc:mysql://localhost:3306/crm_dianzhang_big?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.entity
+
+#lts:
+#  jobclient:
+#    cluster-name: crm-lts-test
+#    registry-address: zookeeper://zoo1.superboss.cc:30002,zoo2.superboss.cc:30002,zoo3.superboss.cc:30002
+#    node-group: raycloud-crm-customer-job-client-dev
+#  tasktracker:
+#    cluster-name: crm-lts-test
+#    registry-address: zookeeper://zoo1.superboss.cc:30002,zoo2.superboss.cc:30002,zoo3.superboss.cc:30002
+#    work-threads: 5
+#    job-runner-class: com.example.lts.test.lts.JobRunnerDispatcher
+#    node-group: raycloud-crm-customer-task-tracker-dev
+lts:
+  jobtracker:
+    cluster-name: test_cluster
+    registry-address: zookeeper://localhost:2181
+  jobclient:
+    cluster-name: test_cluster
+    registry-address: zookeeper://localhost:2181
+    node-group: test_jobClient
+  tasktracker:
+    cluster-name: test_cluster
+    registry-address: zookeeper://localhost:2181
+    work-threads: 5
+    job-runner-class: com.example.lts.test.lts.JobRunnerDispatcher
+    node-group: test_trade_TaskTracker
+#lts:
+#  jobclient:
+#    cluster-name: lts-learn-cluster
+#    registry-address: zookeeper://localhost:2181
+#    node-group: lts-learn-jobclient
+#    use-retry-client: true
+#    configs:
+#      job:
+#        fail:
+#          store: mapdb
+#  jobtracker:
+#    cluster-name: lts-learn-cluster
+#    listen-port: 35001
+#    registry-address: zookeeper://localhost:2181
+#    job-runner-class: com.example.lts.test.lts.JobRunnerDispatcher
+#    configs:
+#      job:
+#        logger: mysql
+#        queue: mysql
+#        url: jdbc:mysql://127.0.0.1:3306/lts
+#        username: root
+#        password: root
+#  monitor:
+#    cluster-name: lts-learn-cluster
+#    registry-address: zookeeper://localhost:2181
